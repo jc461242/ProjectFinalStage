@@ -1,0 +1,111 @@
+
+<!DOCTYPE html> 
+
+<html>
+<head>
+<title>Donate Blood</title>
+<link href="http://fonts.googleapis.com/css?family=Love+Ya+Like+A+Sister" rel="stylesheet" type="text/css">
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+<link href="main.css" rel="stylesheet" >
+<link href="responsive.css" rel="stylesheet" media="screen and
+(max-width: 960px)">
+
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+
+</head>
+<body>
+<div class="wrapper">
+
+<header><h1>Donate Blood</h1></header>
+<nav>
+			<ul>
+			<li><a href="index.html">Home</a></li>
+			<li><a href="#">Eligibility</a></li>
+			<li><a href="voluntary.html">Voluntary</a></li>
+			<li><a href="#">Donate</a></li>
+			<li><a href="aboutus.html">About</a></li>
+			<li><a href="contactus.html">Contact</a></li>
+			</ul>
+		
+</nav>
+
+<section id="col1">
+<img src="volimage.jpg"  alt="Donate blood"> 
+
+<html>
+<head>
+<title>Volunteer Registration</title>
+<script>
+	function checkRePassword(document) {	
+	  var pwd = document.getElementById("password");
+  	  var pwd_msg = document.getElementById('pwd_msg');
+	  var repwd = document.getElementById("rePassword");	  
+	  if (pwd.value != repwd.value) {
+		pwd_msg.innerHTML = "The two passwords are not the same. Please re-enter both now";
+		repwd.value = "";
+		pwd.focus();
+		return false;
+	  }
+	  else {
+		pwd_msg.innerHTML = "";  
+	  }  
+	  return true;
+	}	
+
+	function validateInfo(document) { 
+	  if (checkRePassword(document))
+	  { 
+		return true;
+	  }
+	  return false;
+	}	
+</script>
+</head>
+<body>
+<h1>Please enter your profile </h1>
+<p><i>Fields marked with an asterisk (*) must be entered.</i></p>
+<form action="registration_process.php" method="post">
+ <table border="0">
+	<tr>
+    	<td align="right">* First Name:</td>
+    	<td><input type="text" id="name" name="name" required></td>
+	</tr>
+	<tr>
+    	<td align="right">* Last Name:</td>
+    	<td><input type="text" id="last name" name="last name" required></td>
+	</tr>
+	<tr>
+    	<td align="right">* Contact No.:</td>
+    	<td><input type="text" id="contact No." name="contact No." required></td>
+	</tr>
+	
+	<tr>
+    	<td align="right">* Email:</td>
+    	<td><input type="email" name="email" id="email" required></td>
+	</tr>
+	<tr>
+    	<td align="right">* Age:</td>
+    	<td><input type="age" id="age" name="age" required></td>
+        <td id="pwd_msg" style="color:red;"></td>
+	</tr>
+	<tr>
+    	<td align="right">* Gender:</td>
+    	<td><input type="Gender" id="gender" name="gender" required></td>
+	</tr>
+	<tr>
+    	<td align="right"><input type="submit" name="submit" value="Submit" onClick="return validateInfo(document)"></td>
+    	<td><input type="reset" name="reset" value="Clear"></td>
+	</tr>
+  </table> 
+</form>
+</body>
+</html>
+<footer><h3>Blood donation is our human duty</h3>
+</footer>
+
+</div>
+
+</body>
+</html>
+	 
+	
