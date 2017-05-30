@@ -1,0 +1,132 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Donor</title>
+
+<link href="http://fonts.googleapis.com/css?family=Love+Ya+Like+A+Sister" rel="stylesheet" type="text/css">
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+<link href="main.css" rel="stylesheet" >
+<link href="responsive.css" rel="stylesheet" media="screen and
+(max-width: 960px)">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+
+<script>
+ 
+ function checkName(document)
+ {
+	  
+	 var name=document.getElementById("name");
+	 var name_msg=document.getElementById("name_msg");
+	 
+	 if(name.value == ""){
+		 name_msg.innerHTML="Please enter name.";
+		 name.focus();
+		 return false;}
+	else{
+			name_msg.innerHTML="";
+			 }
+	return true;
+}
+function validateForm(document)
+ {
+	
+	 if (checkName(document) && checkPassword(document) && checkRepassword(document) && checkZIPcode(document) )
+	 {
+		return true; 
+		 }
+	 return false;
+	 
+}
+
+
+
+
+
+
+
+</script>
+</head>
+<body>
+<table>
+<header><h1>Donate Blood</h1></header>
+<nav>
+<ul>
+<li><a href=" index.html">Home</a></li>
+<li><a href=" ">Place</a></li>
+<li><a href=" ">Voluntary</a></li>
+<li><a href="donor1.html ">Donate</a></li>
+ <li><a href="blood.html ">Blood Types</a></li>
+<li><a href=" ">About</a></li>
+<li><a href=" ">Contact</a></li>
+</ul>
+</nav>
+</table>
+
+
+<section id="col9">
+
+
+
+<h1>Donor Registration</h1>
+<p>Fields mark with (*) must be mandatory</p>
+<form action="donor.php" method="post">
+<table border="0" height="500px">
+<tr>
+<td>* Name:</td>
+<td><input type="text" id="name" name="name" onChange="checkName(document)"></td>
+<td id="name_msg" style="color:Blue;"></td>
+</tr>
+<tr>
+<td>* Age : </td>
+<td><input type="text" name="age"></td>
+</tr>
+<tr>
+<td>Gender :</td>
+<td><input type="radio" name="gender" value="male" checked> Male</td>
+<td><input type="radio" name="gender" value="female" checked> Female</td>
+</tr>
+<tr>
+ <td>* Bloodgroup:</td> 	
+
+<td>
+  <select name="bloodgroup">
+    <option value="a+">A+</option>
+    <option value="A-">A-</option>
+    <option value="B+">B+</option>
+    <option value="B-">B-</option>
+    <option value="AB+">AB+</option>
+    <option value="AB-">AB-</option>
+    <option value="O+">O-</option>
+    <option value="O-">O-</option>
+  </select>
+</td>
+</tr>
+<tr>
+<td>Address:</td>
+<td><input type="text" name="address"></td>
+</tr>
+<tr>
+<td>Contactdetails :</td>
+<td><input type="text" name="contactdetails"></td>
+</tr>
+<tr>
+<td><input type="submit" id="submit" onclick="return validateForm(document)"></td>
+<!--<td><input type="reset" id="reset" value="clear"></td>-->
+</tr>
+</table>
+</form>
+
+
+
+</section>
+
+<section id="col10">
+<img src="Blood Donation Image.jpg" alt="donate blood" height="600px" width="686">
+</section>
+<footer><h3>Blood donation is our human duty</h3>
+</footer>
+</body>
+
+
+</html>
