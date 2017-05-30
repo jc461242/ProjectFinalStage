@@ -27,7 +27,7 @@ header h1{
 	padding-left: .5em;
 	
 	}
-	
+
 nav ul{
 	margin:0;
 	padding:0;
@@ -42,11 +42,15 @@ nav ul li {
 nav ul li a {
 	display: block;
 	font-weight: bold;
-	padding: .625em 3em; /* 10px 15px */
+	padding: .625em 3.5em; /* 10px 15px */
 	text-decoration: none;
 	color: #000;
 	border-right: 1px solid #bababa;
 }
+nav ul li a:hover{
+	color: #FF0000;
+}
+
 
 
 img { max-width: 100% }
@@ -68,20 +72,7 @@ img { max-width: 100% }
 	width: 30%;
 	margin-top: 1em;	
 }
-#col4{
 
-	float: left; 
-	width: 60%;
-	margin-top: 1em;
-	margin-left: 3em;
-		
-}
-#col5{
-	float: right; 
-	width: 30%;
-	margin-top: 8em;
-	margin-left: auto;	
-}
 footer {
 		clear: both;
 }
@@ -94,6 +85,69 @@ footer h3 {
 	position: bottom;
 	text-align: center;
 	
+}
+/*start of deep css*/
+#col4{
+padding: inherit;
+	float: left; 
+	width: 60%;
+	margin-top: 2em;
+	margin-left: 3em;
+		
+}
+#colabc{
+padding: inherit;
+	float: left; 
+	width: 60%;
+	margin-top: 4em;
+	margin-left: 3em;
+}
+		#coldef{
+padding: inherit;
+	float: left; 
+	width: 60%;
+	margin-top: 4em;
+	margin-left: 3em;
+		
+}
+#colghi{
+padding: inherit;
+	float: right; 
+	width: 30%;
+	margin-top: 4em;
+	margin-left: 3em;
+}
+		
+#col5{
+	float: right; 
+	width: 30%;
+	margin-top:8em;
+	margin-left: auto;	
+}
+#col6{
+	float: left; 
+	width: 30%;
+	margin-top: 4em;
+	margin-left: auto;	
+	margin-bottom: 8em;
+}
+#col7{
+	text-decoration:none;
+
+	float: left; 
+	width: 30%;
+	margin-top: 4em;
+	margin-left: 6em;
+	margin-bottom: 8em;	
+}
+#col8{
+	text-decoration:none;
+
+	float: right; 
+	width: 30%;
+	margin-top: 4em;
+	margin-left: auto;
+	margin-bottom: 8em;	
 }
 
 

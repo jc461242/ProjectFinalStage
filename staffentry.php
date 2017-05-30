@@ -34,7 +34,7 @@ tr:nth-child(even){background-color: #f2f2f2}
 <body>
 <div class="wrapper">
 
-<header><h1>Donate Blood</h1></header>
+<!--<header><h1>Donate Blood</h1></header>
 <nav>
 			<ul>
 			<li><a href="index.html">Home</a></li>
@@ -51,26 +51,27 @@ tr:nth-child(even){background-color: #f2f2f2}
 			<li><a href=" ">Contact</a></li>
 			</ul>
 		
-</nav>
+</nav>-->
+<?php include 'header.php'; ?>
 
-<section id="colabc">
-<h1>Enter Blood Availability</h1>
+<section id="coldef">
+<h1>Enter Staff Details</h1>
 
 
-<form action="blood_group.php" method="post">
+<form action="staffmembers.php" method="post">
  <table border="0">
 	<tr>
-    	<td align="right">Bloodgroup</td>
-    	<td><input type="text" id="Bloodgroup" name="Bloodgroup" required></td>
+    	<td align="right">Name</td>
+    	<td><input type="text" id="Name" name="Name" required></td>
 	</tr>
 		<tr>
-    	<td align="right">Description</td>
-    	<td><input type="text" id="Description" name="Description" required></td>
+    	<td align="right">Contact</td>
+    	<td><input type="text" id="Contact" name="Contact" required></td>
        
 	</tr>
     <tr>
-    	<td align="right">Availability</td>
-    	<td><input type="text" name="Availability" id="Availability" required></td>
+    	<td align="right">Email</td>
+    	<td><input type="text" name="Email" id="Email" required></td>
 	</tr>
 		<tr>
     	<td align="right"><input type="submit" name="submit" value="Submit" onClick="return validateInfo(document)"></td>
@@ -80,8 +81,8 @@ tr:nth-child(even){background-color: #f2f2f2}
 </form>
 </section>
 
-<section id="col5">
-<img src="image20.jpg" alt="Donate blood"> 
+<section id="colghi">
+<img src="image12.png" alt="Donate blood"> 
 </section>
 
 <footer><h3>Blood donation is our human duty</h3>
