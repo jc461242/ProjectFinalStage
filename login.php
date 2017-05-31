@@ -110,7 +110,7 @@ $(document).ready(function(){
         <br/>
           <br/>
     
-            <button id="btnSignup" style="background-color:green;">Sign Up</button>
+            <button id="btnSignup" style="background-color:gray;">Sign Up</button>
         
     </div>
 </section>

@@ -37,17 +37,15 @@ $(document).ready(function(){
 
 <?php include 'header.php'; ?>
 <section>
-<h3 style="color:white;">Donors View </h3>
-<h1 >Donors View  </h1>
+<h3 style="color:white;">Nurse Staff View </h3>
+<h1 >Nurse Staff View </h1>
         <table id="tableeg" class="display" style="font-size:14px; font-family:Arial, Helvetica, sans-serif" >
         <thead>
                     <tr>	
-                        <th scope="col">Donor Name</th>
-                        <th scope="col">Donor Age</th> 
-                        <th scope="col">Gender</th>
-                        <th scope="col">Address</th>
-                        <th scope="col">Blood Group</th>
-                        <th scope="col">Contact Details</th>
+                        <th scope="col">Nurse Staff Name</th>
+                        <th scope="col">Contact</th> 
+                        <th scope="col">Email</th>
+                       
                     </tr>
         </thead>
         <tbody> <?php
@@ -55,19 +53,17 @@ $(document).ready(function(){
                             include_once('config.php');
                             $conn  = db_connect();
                             //create an insert query 	
-                            $sql = "SELECT * FROM donor";
+                            $sql = "SELECT * FROM staffmembers";
                             //echo 'here'; die();
                             $results = $conn->query($sql);
                 
             while($data = $results->fetch_assoc()){;?> 
                 
                     <tr>
-                        <td><?php echo $data['name'];?></td>
-                        <td><?=$data['age'];?></td>
-                        <td><?=$data['gender'];?></td>
-                        <td><?=$data['bloodgroup'];?></td>
-                        <td><?=$data['address'];?></td>
-                        <td><?=$data['contactdetails'];?></td>
+                        <td><?php echo $data['Name'];?></td>
+                        <td><?=$data['Contact'];?></td>
+                        <td><?=$data['Email'];?></td>
+                     
                 
                     </tr>
                  

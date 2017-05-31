@@ -3,6 +3,14 @@
 <html>
 <head>
 <title>Donate Blood</title>
+<?php    
+	session_start();
+	
+	if ($_SESSION['valid_user']==""){
+		header("location:login.php?msg=Access Denied");
+	}
+	  else{
+?>
 <link href="http://fonts.googleapis.com/css?family=Love+Ya+Like+A+Sister" rel="stylesheet" type="text/css">
 <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
 <link href="main.css" rel="stylesheet" >
@@ -66,3 +74,4 @@
 
 </body>
 </html>
+<?php }?>

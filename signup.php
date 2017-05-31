@@ -14,7 +14,7 @@ if(isset($_POST['name'], $_POST['email'], $_POST['password'])) {
 	if($conn -> query($sql))
 	{
 		echo "<h1>User Successfully Registered </h1>";
-		echo "<a href=\"login.html\">Return Back</a>";
+		echo "<a href=\"login.php\">Return Back</a>";
 	}
 	$conn -> close();		
 }

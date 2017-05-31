@@ -3,14 +3,6 @@
 <html>
 <head>
 <title>Donate Blood</title>
-<?php    
-	session_start();
-	
-	if ($_SESSION['valid_user']==""){
-		header("location:login.php?msg=Access Denied");
-	}
-	  else{
-?>
 <link href="http://fonts.googleapis.com/css?family=Love+Ya+Like+A+Sister" rel="stylesheet" type="text/css">
 <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
 <link href="main.css" rel="stylesheet" >
@@ -37,17 +29,16 @@ $(document).ready(function(){
 
 <?php include 'header.php'; ?>
 <section>
-<h3 style="color:white;">Donors View </h3>
-<h1 >Donors View  </h1>
+<h3 style="color:white;">Volunteers View </h3>
+<h1 >Volunteers View </h1>
         <table id="tableeg" class="display" style="font-size:14px; font-family:Arial, Helvetica, sans-serif" >
         <thead>
                     <tr>	
-                        <th scope="col">Donor Name</th>
-                        <th scope="col">Donor Age</th> 
-                        <th scope="col">Gender</th>
-                        <th scope="col">Address</th>
-                        <th scope="col">Blood Group</th>
-                        <th scope="col">Contact Details</th>
+                        <th scope="col">First Name</th>
+                        <th scope="col">Last Age</th> 
+                        <th scope="col">contact No</th>
+                        <th scope="col">Email</th>
+                        <th scope="col">Age</th>
                     </tr>
         </thead>
         <tbody> <?php
@@ -55,19 +46,19 @@ $(document).ready(function(){
                             include_once('config.php');
                             $conn  = db_connect();
                             //create an insert query 	
-                            $sql = "SELECT * FROM donor";
+                            $sql = "SELECT * FROM  volunteers";
                             //echo 'here'; die();
                             $results = $conn->query($sql);
                 
             while($data = $results->fetch_assoc()){;?> 
                 
                     <tr>
-                        <td><?php echo $data['name'];?></td>
+                        <td><?php echo $data['first_name'];?></td>
+                        <td><?=$data['last_name'];?></td>
+                        <td><?=$data['contact_no'];?></td>
+                        <td><?=$data['email'];?></td>
                         <td><?=$data['age'];?></td>
-                        <td><?=$data['gender'];?></td>
-                        <td><?=$data['bloodgroup'];?></td>
-                        <td><?=$data['address'];?></td>
-                        <td><?=$data['contactdetails'];?></td>
+  
                 
                     </tr>
                  
@@ -82,7 +73,6 @@ $(document).ready(function(){
 
 </body>
 </html>
-<?php }?>
  
 
 

@@ -6,7 +6,7 @@
   	unset($_SESSION['valid_user']);		// free session var valid_user 
 	session_destroy();
 	echo "<p>You  logged out</p>";
-	echo "<a href=\"index.html\">Back to  Home page</a>"; 
+	echo "<a href=\"index.php\">Back to  Home page</a>"; 
   }
   
 ?> 
